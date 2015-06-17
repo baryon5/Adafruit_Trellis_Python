@@ -231,6 +231,6 @@ class Adafruit_TrellisSet(object):
 		   If position is not within the range of possible values, returns None.
 		"""
 		if position > 16*len(self._matrices) or position < 0: return None, None
-		matrix = position / 16
+		matrix = position // 16
 		offset = position % 16
 		return self._matrices[matrix], offset

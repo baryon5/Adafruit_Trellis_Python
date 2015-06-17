@@ -60,7 +60,7 @@ numKeys = NUMTRELLIS * 16
 I2C_BUS = 1
 
 # Setup
-print 'Trellis Demo'
+print('Trellis Demo')
 
 # TODO: Setup the INT input
 
@@ -81,7 +81,7 @@ for i in range(numKeys):
 	time.sleep(0.05)
 
 # Loop
-print 'Press Ctrl-C to quit.'
+print('Press Ctrl-C to quit.')
 while True:
 	time.sleep(0.03)
 
@@ -92,11 +92,11 @@ while True:
 			for i in range(numKeys):
 				# if it was pressed, turn it on
 				if trellis.justPressed(i):
-					print 'v{0}'.format(i)
+					print('v{0}'.format(i))
 					trellis.setLED(i)
 				# if it was released, turn it off
 				if trellis.justReleased(i):
-					print '^{0}'.format(i)
+					print('^{0}'.format(i))
 					trellis.clrLED(i)
 			# tell the trellis to set the LEDs we requested
 			trellis.writeDisplay()
@@ -108,7 +108,7 @@ while True:
 			for i in range(numKeys):
 				# if it was pressed...
 				if trellis.justPressed(i):
-					print 'v{0}'.format(i)
+					print('v{0}'.format(i))
 					# Alternate the LED
 					if trellis.isLED(i):
 						trellis.clrLED(i)
